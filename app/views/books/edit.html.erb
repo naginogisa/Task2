@@ -1,7 +1,7 @@
 <body>
   <h1>Editing Book</h1>
   <%= form_for(@book) do |f| %>
-    
+    <%= render 'layouts/error_messages', model: f.object %>
     <div class=field>
       <label>Title</label>
       <%= f.text_field :title %>
@@ -18,7 +18,7 @@
     
     <%= link_to "Show", book_path(@book) %>
     |
-    <%= link_to "Back", books_new_path %>
+    <%= link_to "Back", books_path %>
     
     <% end %>
   </body>
